@@ -1,0 +1,75 @@
+body {
+    background-color: #BF3880;
+}
+
+.bg {
+    height: 550px;
+    background-color: #D68FB0;
+    margin-top: -858px;
+}
+
+.nav-color {
+    background-color: #D68FB0;
+}
+
+.experience .baris1 .col-lg-4 {
+    background-color: #F7CAC9;
+}
+
+.experience .baris1 .c2 {
+    background-image: linear-gradient(to top left, #EAE6F0 0%, #b28fe4 100%);
+}
+
+.experience .baris2 .col-4 .panjang {
+    background-color: #F7CAC9;
+}
+
+.project .container .row .ktk .galeri {
+    background-color: #F7CAC9;
+}
+
+.contact .container .pembungkus {
+    background-color: #F7CAC9;
+}
+
+footer {
+    background-color: #D68FB0;
+}
+
+.btn-danger {
+    background-image: linear-gradient(to top left, #EAE6F0 0%, #b28fe4 100%);
+}
+
+.btn-danger:hover {
+    background-image: linear-gradient(to top left, #cab5ed 0%, #ad90d2 100%);
+}
+
+.about .container .row .m-about2 h6 {
+    color: #EAE6F0;
+}
+
+.experience h1 {
+    color: #EAE6F0;
+}
+
+.experience h2 {
+    font-weight: 700;
+    color: #EAE6F0;
+}
+
+.experience h5 {
+    padding-bottom: 5px;
+    color: #EAE6F0;
+}
+
+.more {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: -6px;
+    text-decoration: none;
+    color: #EAE6F0;
+}
+
+.more:hover {
+    color: #EAE6F0;
+}

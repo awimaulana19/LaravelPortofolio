@@ -1,0 +1,55 @@
+body {
+    background-color: #232323;
+    color: white;
+}
+
+.more {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: -6px;
+    text-decoration: none;
+    color: #ef4040;
+}
+
+.more:hover {
+    color: #ef4040;
+}
+
+@media only screen and (max-width: 700px) {
+    .project .container .row .ktk .galeri {
+        /* width: 380px;
+      height: 200px; */
+        background-color: #1e1e1e;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .project .container .row .ktk img {
+        width: 400px;
+        height: 280px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .ktk-atas {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+
+    .project .container .row .ktk .galeri {
+        width: 500px;
+        height: 400px;
+        background-color: #1e1e1e;
+        margin: 10px;
+    }
+
+    .project .container .row .ktk img {
+        width: 400px;
+        height: 280px;
+    }
+
+    .project .container .row .ktk .kata {
+        margin-left: 0.1px;
+    }
+}

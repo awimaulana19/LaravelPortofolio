@@ -1,0 +1,75 @@
+body {
+    background-color: #3d550c;
+}
+
+.bg {
+    height: 550px;
+    background-color: #59981a;
+    margin-top: -858px;
+}
+
+.nav-color {
+    background-color: #59981a;
+}
+
+.experience .baris1 .col-lg-4 {
+    background-color: #81b622 ;
+}
+
+.experience .baris1 .c2 {
+    background-image: linear-gradient(to top left, #ecf87f 0%, #b8c640 100%);
+}
+
+.experience .baris2 .col-4 .panjang {
+    background-color: #81b622;
+}
+
+.project .container .row .ktk .galeri {
+    background-color: #81b622;
+}
+
+.contact .container .pembungkus {
+    background-color: #81b622;
+}
+
+footer {
+    background-color: #59981a;
+}
+
+.btn-danger {
+    background-image: linear-gradient(to top left, #ecf87f 0%, #b8c640 100%);
+}
+
+.btn-danger:hover {
+    background-image: linear-gradient(to top left, #a9b441 0%, #889512 100%);
+}
+
+.about .container .row .m-about2 h6 {
+    color: #ecf87f;
+}
+
+.experience h1 {
+    color: #ecf87f;
+}
+
+.experience h2 {
+    font-weight: 700;
+    color: #ecf87f;
+}
+
+.experience h5 {
+    padding-bottom: 5px;
+    color: #ecf87f;
+}
+
+.more {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: -6px;
+    text-decoration: none;
+    color: #ecf87f;
+}
+
+.more:hover {
+    color: #ecf87f;
+}

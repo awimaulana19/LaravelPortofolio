@@ -1,0 +1,74 @@
+#main{
+    background-color: #232323;
+    color: white;
+  }
+
+.form-signin {
+    max-width: 400px;
+    padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    color: rgb(255, 255, 255);
+    background-color: #232323;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    color: rgb(255, 255, 255);
+    background-color: #232323;
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-regist {
+    max-width: 400px;
+    padding: 15px;
+}
+
+.form-regist .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-regist input[type="name"] {
+    color: rgb(255, 255, 255);
+    background-color: #232323;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-regist input[type="email"] {
+    color: rgb(255, 255, 255);
+    background-color: #232323;
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-regist input[type="username"] {
+    color: rgb(255, 255, 255);
+    background-color: #232323;
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-regist input[type="password"] {
+    color: rgb(255, 255, 255);
+    background-color: #232323;
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
