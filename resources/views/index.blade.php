@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portofolio {{ $data->name }}</title>
+    <title>Portofolio {{ $data->user->name }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="{{ $data->portofolio->background }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset($data->background) }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
   </head>
   <body>
@@ -31,25 +31,6 @@
                 <a class="nav-link active text-light" href="#kontak">CONTACT</a>
               </li>
             </ul>
-            <ul class="navbar-nav ms-auto">
-              @auth
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  {{ Auth::user()->name }}
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-window-reverse"></i> Dashboard</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li>
-                    <form action="/logout" method="post">
-                      @csrf
-                      <button class="dropdown-item" type="submit"><i class="bi bi-box-arrow-left"></i> Logout</button>
-                    </form>
-                  </li>
-                </ul>
-              </li>
-              @endauth
-            </ul>
           </div>
         </div>
       </nav>
@@ -60,13 +41,13 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-12 m-about1">
-            <img src="{{ asset('storage/' . $data->portofolio->gambar) }}" alt="Tidak Ada Gambar">
+            <img src="{{ asset('storage/' . $data->gambar) }}" alt="Tidak Ada Gambar">
           </div>
           <div class="col-lg-6 col-md-12 m-about2">
-            <h6>Hello I'm {{ $data->name }}</h6>
-            <h1>{{ $data->portofolio->portfolio }}</h1>
-            <p>{!! $data->portofolio->deskripsi !!}</p>
-            <a href="https://www.instagram.com/{{ $data->portofolio->ig }}" target="_blank" type="button" class="btn btn-danger">FOLLOW</a>
+            <h6>Hello I'm {{ $data->user->name }}</h6>
+            <h1>{{ $data->portfolio }}</h1>
+            <p>{!! $data->deskripsi !!}</p>
+            <a href="https://www.instagram.com/{{ $data->ig }}" target="_blank" type="button" class="btn btn-danger">FOLLOW</a>
           </div>
         </div>
       </div>
@@ -78,47 +59,47 @@
         <div class="row baris1 justify-content-center">
           <div class="col-lg-4 col-md-12 c1">
             <h5>Profile</h5>
-            <p>Nama : {{ $data->name }}</p>
-            <p>Tanggal Lahir : {{ $data->portofolio->ttl }}</p>
-            <p>Pendidikan : {{ $data->portofolio->pendidikan }}</p>
-            <p>Alamat : {{ $data->portofolio->alamat }}</p>
+            <p>Nama : {{ $data->user->name }}</p>
+            <p>Tanggal Lahir : {{ $data->ttl }}</p>
+            <p>Pendidikan : {{ $data->pendidikan }}</p>
+            <p>Alamat : {{ $data->alamat }}</p>
           </div>
           <div class="col-lg-4 col-md-12 c2 persegi">
             <h5>Pendidikan Formal</h5>
-            <p>SD : {{ $data->portofolio->sd }}</p>
-            <p>SMP : {{ $data->portofolio->smp }}</p>
-            <p>SMA : {{ $data->portofolio->sma }}</p>
+            <p>SD : {{ $data->sd }}</p>
+            <p>SMP : {{ $data->smp }}</p>
+            <p>SMA : {{ $data->sma }}</p>
           </div>
           <div class="col-lg-4 col-md-12 c3 persegi">
             <h5>Kontak/Sosmed</h5>
-            <p>Nomor : {{ $data->portofolio->wa }}</p>
-            <p>Email : {{ $data->portofolio->email }}</p>
-            <p>Instagram : {{ $data->portofolio->ig }}</p>
-            <p>Twitter : {{ $data->portofolio->twitter }}</p>
+            <p>Nomor : {{ $data->wa }}</p>
+            <p>Email : {{ $data->email }}</p>
+            <p>Instagram : {{ $data->ig }}</p>
+            <p>Twitter : {{ $data->twitter }}</p>
           </div>
         </div>
         <div class="row baris2 justify-content-center">
           <div class="col-4 persegi-2">
-            <h1>{{ $data->portofolio->exp }}</h1>
+            <h1>{{ $data->exp }}</h1>
             <h3>Years Experience</h3>
           </div>
           <div class="col-4 p2">
             <div class="row r2-1 panjang">
-              <h2>{{ $data->portofolio->client }}</h2>
+              <h2>{{ $data->client }}</h2>
               <p>Clients</p>
             </div>
             <div class="row r2-2 panjang">
-              <h2>{{ $data->portofolio->project }}</h2>
+              <h2>{{ $data->project }}</h2>
               <p>Completed Projects</p>
             </div>
           </div>
           <div class="col-4 p3">
             <div class="row r3-1 panjang">
-              <h2>{{ $data->portofolio->study }}</h2>
+              <h2>{{ $data->study }}</h2>
               <p>Years Study</p>
             </div>
             <div class="row r3-2 panjang">
-              <h2>{{ $data->portofolio->certificate }}</h2>
+              <h2>{{ $data->certificate }}</h2>
               <p>Certificate</p>
             </div>
           </div>
@@ -135,7 +116,7 @@
             <p>Beberapa Project Yang Telah Saya Buat</p>
           </div>
           <div class="col-4">
-            <a href="/allproject" type="button" class="btn btn-danger">VIEW ALL</a>
+            <a href="/allproject/{{ $data->user->username }}" type="button" class="btn btn-danger">VIEW ALL</a>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -164,7 +145,7 @@
               <p>Silahkan Klik Tombol Disamping Untuk Menghubungi Saya</p>
             </div>
             <div class="col-6 d-flex align-self-center justify-content-center">
-              <a href="http://wa.me/{{ $data->portofolio->wa }}" type="button" class="btn btn-danger" target="_blank">CONTACT</a>
+              <a href="http://wa.me/{{ $data->wa }}" type="button" class="btn btn-danger" target="_blank">CONTACT</a>
             </div>
           </div>
         </div>
@@ -178,9 +159,9 @@
         <div class="row">
           <div class="col-4"></div>
           <div class="col-4 d-flex justify-content-center pt-4">
-            <a href="https://www.instagram.com/{{ $data->portofolio->ig }}" class="bi bi-instagram text-white" target="_blank"></a>
-            <a href="https://twitter.com/{{ $data->portofolio->twitter }}" class="bi bi-twitter text-white ps-4 pe-4" target="_blank"></a>
-            <a href="http://wa.me/{{ $data->portofolio->wa }}" class="bi bi-whatsapp text-white" target="_blank"></a>
+            <a href="https://www.instagram.com/{{ $data->ig }}" class="bi bi-instagram text-white" target="_blank"></a>
+            <a href="https://twitter.com/{{ $data->twitter }}" class="bi bi-twitter text-white ps-4 pe-4" target="_blank"></a>
+            <a href="http://wa.me/{{ $data->wa }}" class="bi bi-whatsapp text-white" target="_blank"></a>
           </div>
           <div class="col-4 d-flex justify-content-end pt-4">
             <p>Created By Kelompok 2</p>
@@ -192,7 +173,7 @@
     <div class="bg"></div>
     {{-- <div class="bg-atas"></div> --}}
     <!-- Script -->
-    <script src="js/script.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- Akhir Script -->
   </body>

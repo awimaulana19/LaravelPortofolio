@@ -118,7 +118,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="/index">
+                                <a class="dropdown-item" href="/index/{{ auth()->user()->username }}">
                                     <i class="bi bi-house-door mr-2"></i>
                                     Portofolio
                                 </a>

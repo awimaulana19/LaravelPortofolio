@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Storage;
 
 class PortofolioController extends Controller
 {
-    public function index () {
-        $data = Auth::user();
-        $projects = Project::Where('user_id', $data['id'])->take(4)->get();
+    public function index (User $user) {
+        $data = Portofolio::Where('user_id', $user->id)->first();
+        $projects = Project::Where('user_id', $user->id)->take(4)->get();
         
         return view('index',[
             "data" => $data,
@@ -146,7 +146,7 @@ class PortofolioController extends Controller
     }
 
     public function show(Project $project){
-        $data = Auth::user();
+        $data = Portofolio::Where('user_id', $project->user_id)->first();
 
         return view('projectshow', [
             "data" => $data,
@@ -154,8 +154,8 @@ class PortofolioController extends Controller
         ]);
     }
 
-    public function all(){
-        $data = Auth::user();
+    public function all(User $user){
+        $data = Portofolio::Where('user_id', $user->id)->first();
         $projects = Project::Where('user_id', $data['id'])->get();
         
         return view('allproject',[

@@ -9,7 +9,7 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('css/styleproject.css') }}">
-    <link rel="stylesheet" href="{{ asset($data->portofolio->background) }}">
+    <link rel="stylesheet" href="{{ asset($data->background) }}">
 </head>
 <body>
     <div class="container">
@@ -19,7 +19,7 @@
                     <img src="{{ asset('storage/' . $posting->gambar) }}" class="card-img-top mb-2" width="1000px" height="500px"
                         alt="...">
                 <p>{!! $posting->isi !!}</p>
-                <a class="btn btn-light mt-3 mb-4" href="/index">Kembali Ke Portofolio</a>
+                <a class="btn btn-light mt-3 mb-4" href="/index/{{ $data->user->username }}">Kembali Ke Portofolio</a>
             </div>
         </div>
     </div>
