@@ -5,7 +5,7 @@
         <form enctype="multipart/form-data" method="post" action="/dashboard/portofolio/{{ $portofolio->id }}">
             @csrf
             <div class="mb-3">
-                <label for="background" class="form-label">Background</label>
+                <label for="background" class="form-label">Background (Template Default)</label>
                 <br>
                 <select class="form-select" id="background" name="background">
                     @if (old('background', $portofolio->background) == ' ')
@@ -59,14 +59,14 @@
             </div>
             <div class="mb-3">
                 <label for="deskripsi" class="form-label">Deskripsi</label>
+                <div>
+                    <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" id="deskripsi" cols="30" rows="10">{{ old('deskripsi', $portofolio->deskripsi) }}</textarea>
+                </div>
                 @error('deskripsi')
                     <p class="text-danger">
                         {{ $message }}
                     </p>
                 @enderror
-                <input id="deskripsi" type="hidden" name="deskripsi"
-                    value="{{ old('deskripsi', $portofolio->deskripsi) }}">
-                <trix-editor input="deskripsi"></trix-editor>
             </div>
             <input type="hidden" name="gambarLama" value="{{ $portofolio->gambar }}">
             <div class="mb-3">

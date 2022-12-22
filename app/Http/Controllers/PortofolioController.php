@@ -12,11 +12,11 @@ use Illuminate\Support\Facades\Storage;
 class PortofolioController extends Controller
 {
     public function index (User $user) {
-        $data = Portofolio::Where('user_id', $user->id)->first();
+        $datas = Portofolio::Where('user_id', $user->id)->first();
         $projects = Project::Where('user_id', $user->id)->take(4)->get();
-        
-        return view('index',[
-            "data" => $data,
+        // dd($data);
+        return view('template',[
+            "data" => $datas,
             "project" => $projects
         ]);
     }
@@ -99,7 +99,7 @@ class PortofolioController extends Controller
 
         $validateData = $request->validate([
             'background' => 'max:255',
-            'deskripsi' => 'max:255',
+            'deskripsi' => 'max:5000',
             'portfolio' => 'max:50',
             'gambar' => 'image|file|max:5024',
             'ttl' => 'date',
