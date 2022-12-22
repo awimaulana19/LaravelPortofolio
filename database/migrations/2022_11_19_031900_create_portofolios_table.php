@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->timestamps();
+            $table->string('template')->default(1);
             $table->string('portfolio')->nullable();
             $table->text('deskripsi')->nullable();
             $table->string('gambar')->nullable();

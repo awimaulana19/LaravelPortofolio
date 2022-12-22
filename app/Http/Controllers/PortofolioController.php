@@ -98,6 +98,7 @@ class PortofolioController extends Controller
         $portofolio = Portofolio::Where('id', $id)->first();
 
         $validateData = $request->validate([
+            'template' => 'max:255',
             'background' => 'max:255',
             'deskripsi' => 'max:5000',
             'portfolio' => 'max:50',

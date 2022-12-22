@@ -5,6 +5,49 @@
         <form enctype="multipart/form-data" method="post" action="/dashboard/portofolio/{{ $portofolio->id }}">
             @csrf
             <div class="mb-3">
+                <label for="template" class="form-label">Template</label>
+                <br>
+                <select class="form-select" id="template" name="template">
+                    @if (old('template', $portofolio->template) == 1)
+                        <option value="1" selected>Default</option>
+                        <option value="2">Shape</option>
+                        <option value="3">Biru</option>
+                        <option value="4">Pink</option>
+                        <option value="5">Jingga</option>
+                    @elseif (old('template', $portofolio->template) == 2)
+                        <option value="1">Default</option>
+                        <option value="2" selected>Shape</option>
+                        <option value="3">Biru</option>
+                        <option value="4">Pink</option>
+                        <option value="5">Jingga</option>
+                    @elseif (old('template', $portofolio->template) == 3)
+                        <option value="1">Default</option>
+                        <option value="2">Shape</option>
+                        <option value="3" selected>Biru</option>
+                        <option value="4">Pink</option>
+                        <option value="5">Jingga</option>
+                    @elseif (old('template', $portofolio->template) == 4)
+                        <option value="1">Default</option>
+                        <option value="2">Shape</option>
+                        <option value="3">Biru</option>
+                        <option value="4" selected>Pink</option>
+                        <option value="5">Jingga</option>
+                    @elseif (old('template', $portofolio->template) == 5)
+                        <option value="1">Default</option>
+                        <option value="2">Shape</option>
+                        <option value="3">Biru</option>
+                        <option value="4">Pink</option>
+                        <option value="5" selected>Jingga</option>
+                    @else
+                        <option value="1">Default</option>
+                        <option value="2">Shape</option>
+                        <option value="3">Biru</option>
+                        <option value="4">Pink</option>
+                        <option value="5">Jingga</option>
+                    @endif
+                </select>
+            </div>
+            <div class="mb-3">
                 <label for="background" class="form-label">Background (Template Default)</label>
                 <br>
                 <select class="form-select" id="background" name="background">
