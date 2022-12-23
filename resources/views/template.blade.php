@@ -8,5 +8,7 @@
         @include('template.template3')
     @elseif($data->template == 4)
         @include('template.template4')
+    @elseif($data->template == 5)
+        @include('template.template5')
     @endif
 </html>
