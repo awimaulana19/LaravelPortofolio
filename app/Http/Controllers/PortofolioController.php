@@ -13,7 +13,7 @@ class PortofolioController extends Controller
 {
     public function index (User $user) {
         $datas = Portofolio::Where('user_id', $user->id)->first();
-        $projects = Project::Where('user_id', $user->id)->take(4)->get();
+        $projects = Project::Where('user_id', $user->id)->take(6)->get();
         // dd($data);
         return view('template',[
             "data" => $datas,
@@ -100,7 +100,7 @@ class PortofolioController extends Controller
         $validateData = $request->validate([
             'template' => 'max:255',
             'background' => 'max:255',
-            'deskripsi' => 'max:5000',
+            'deskripsi' => 'max:1000',
             'portfolio' => 'max:50',
             'gambar' => 'image|file|max:5024',
             'ttl' => 'date',

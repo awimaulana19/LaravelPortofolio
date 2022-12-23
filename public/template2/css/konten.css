@@ -119,3 +119,9 @@ h1, h2, img, p, a, .card, form{
   color: #ffff;
   margin: 0 auto;
 }
+
+.kontak form .group input[type=email] {
+  border: 0.1rem solid black;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}

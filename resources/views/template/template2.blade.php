@@ -116,14 +116,18 @@
       </section>
       <section class="kontak" id="kontak">
           <h2 class="svg-demo">Kontak</h2>
-          <form target="_blank" action="http://wa.me/{{ $data->wa }}">
+          <form action="https://formspree.io/f/xdovnwla" method="POST">
               <div class="group">
                   <label for="nama">Nama</label>
-                  <input type="text" id="nama" name="nama" />
+                  <input type="text" id="nama" name="name" required />
+              </div>
+              <div class="group">
+                  <label for="nama">Email</label>
+                  <input type="email" name="email" id="email" required>
               </div>
               <div class="group">
                   <label for="pesan">Pesan</label>
-                  <textarea id="pesan" name="pesan"></textarea>
+                  <textarea id="pesan" name="message" required></textarea>
               </div>
               <div class="group">
                   <input type="submit" value="Kirim" />
