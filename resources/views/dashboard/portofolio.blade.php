@@ -12,37 +12,37 @@
                         <option value="1" selected>Default</option>
                         <option value="2">Shape</option>
                         <option value="3">Box Green</option>
-                        <option value="4">Pink</option>
+                        <option value="4">Interactful</option>
                         <option value="5">Jingga</option>
                     @elseif (old('template', $portofolio->template) == 2)
                         <option value="1">Default</option>
                         <option value="2" selected>Shape</option>
                         <option value="3">Box Green</option>
-                        <option value="4">Pink</option>
+                        <option value="4">Interactful</option>
                         <option value="5">Jingga</option>
                     @elseif (old('template', $portofolio->template) == 3)
                         <option value="1">Default</option>
                         <option value="2">Shape</option>
                         <option value="3" selected>Box Green</option>
-                        <option value="4">Pink</option>
+                        <option value="4">Interactful</option>
                         <option value="5">Jingga</option>
                     @elseif (old('template', $portofolio->template) == 4)
                         <option value="1">Default</option>
                         <option value="2">Shape</option>
                         <option value="3">Box Green</option>
-                        <option value="4" selected>Pink</option>
+                        <option value="4" selected>Interactful</option>
                         <option value="5">Jingga</option>
                     @elseif (old('template', $portofolio->template) == 5)
                         <option value="1">Default</option>
                         <option value="2">Shape</option>
                         <option value="3">Box Green</option>
-                        <option value="4">Pink</option>
+                        <option value="4">Interactful</option>
                         <option value="5" selected>Jingga</option>
                     @else
                         <option value="1">Default</option>
                         <option value="2">Shape</option>
                         <option value="3">Box Green</option>
-                        <option value="4">Pink</option>
+                        <option value="4">Interactful</option>
                         <option value="5">Jingga</option>
                     @endif
                 </select>

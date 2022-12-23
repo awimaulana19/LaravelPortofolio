@@ -25,13 +25,14 @@
               </div>
             <div class="mb-3">
                 <label for="isi" class="form-label">Isi</label>
+                <div>
+                    <textarea class="form-control @error('isi') is-invalid @enderror" name="isi" id="isi" cols="30" rows="10">{{ old('isi') }}</textarea>
+                </div>
                 @error('isi')
                     <p class="text-danger">
                         {{ $message }}
                     </p>
                 @enderror
-                <input id="isi" type="hidden" name="isi" value="{{ old('isi') }}">
-                <trix-editor input="isi"></trix-editor>
             </div>
             <button type="submit" class="btn btn-primary">Create</button>
         </form>

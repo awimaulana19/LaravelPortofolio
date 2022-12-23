@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChaabaneAnas Porfolio</title>
+    <title>Portofolio {{ $data->user->name }}</title>
     <link rel="stylesheet" href="{{ asset('template3/css/style.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
 </head>
@@ -48,8 +48,7 @@
         <img src="{{ asset('storage/' . $dataproject->gambar) }}" alt="Gambar Proyek">
          <div>
             <p>{{ $dataproject->judul }}</p>
-            <br>
-            <br>
+            <p style="font-size: 11px; font-weight: 500;">{{ $dataproject->isi }}</p>
             <br>
             <a class="button" href="/showproject/{{ $dataproject->id }}">See Project</a>
          </div>

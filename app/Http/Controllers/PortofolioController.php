@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Portofolio;
 use App\Models\User;
 use App\Models\Project;
+use App\Models\Portofolio;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -14,7 +15,12 @@ class PortofolioController extends Controller
     public function index (User $user) {
         $datas = Portofolio::Where('user_id', $user->id)->first();
         $projects = Project::Where('user_id', $user->id)->take(6)->get();
-        // dd($data);
+
+        foreach ($projects as $project) {
+            $pendek = Str::limit($project->isi, 200, '...');
+            $project->isi = $pendek;
+        }
+        
         return view('template',[
             "data" => $datas,
             "project" => $projects
