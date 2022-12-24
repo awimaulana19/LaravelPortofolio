@@ -10,7 +10,7 @@
     </div>
     <table class="table">
         <tr>
-            <th>Nama</th>
+            <th class="col-3">Nama</th>
             <td>{{ $profile->name }}</td>
         </tr>
         <tr>

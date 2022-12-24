@@ -16,7 +16,7 @@
                 </form>
                 <img src="{{ asset('storage/' . $data->gambar) }}" class="card-img-top mb-3" width="1200px" height="400px"
                     alt="...">
-                <p>{!! $data->isi !!}</p>
+                <p>{{ $data->isi }}</p>
             </div>
         </div>
     </div>

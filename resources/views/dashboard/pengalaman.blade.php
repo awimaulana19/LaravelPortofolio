@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="col-lg-8">
-        <form method="post" action="/dashboard/portofolio/{{ $portofolio->id }}">
+        <form method="post" action="/pengalaman/{{ $portofolio->id }}">
             @csrf
             <div class="mb-3">
                 <label for="exp" class="form-label">Pengalaman Proyek (Tahun)</label>

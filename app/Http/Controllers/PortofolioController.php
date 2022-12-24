@@ -38,6 +38,28 @@ class PortofolioController extends Controller
         ]);
     }
 
+    public function portfolio(){
+        $data = Auth::user();
+        $akun = Portofolio::Where('user_id', $data['id'])->first();
+
+        return view('dashboard.infoportfolio', [
+            "title" => "Portofolio",
+            "data" => $akun,
+            "profile" => $data
+        ]);
+    }
+    
+    public function exp(){
+        $data = Auth::user();
+        $akun = Portofolio::Where('user_id', $data['id'])->first();
+
+        return view('dashboard.infopengalaman', [
+            "title" => "Portofolio",
+            "data" => $akun,
+            "profile" => $data
+        ]);
+    }
+
     public function jenis($id)
     {
         $data = Portofolio::Where('id', $id)->first();
@@ -149,7 +171,15 @@ class PortofolioController extends Controller
 
         Portofolio::where('id', $portofolio->id)->update($validateData);
 
-        return redirect('/dashboard')->with('success', 'Berhasil Diupdate');
+        if (request()->is('portofolio*')) {   
+            return redirect('/portofolio')->with('success', 'Portofolio Berhasil Diupdate');
+        }
+        if (request()->is('datadiri*')) {
+            return redirect('/datadiri')->with('success', 'Data Diri Berhasil Diupdate');
+        }
+        if (request()->is('pengalaman*')) {
+            return redirect('/pengalaman')->with('success', '   Pengalaman Berhasil Diupdate');
+        }
     }
 
     public function show(Project $project){

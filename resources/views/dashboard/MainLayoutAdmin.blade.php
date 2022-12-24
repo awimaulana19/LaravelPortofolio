@@ -41,7 +41,7 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item {{ request()->is('dashboard*') ? 'active' : '' }}">
                 <a class="nav-link" href="/dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="bi bi-person-circle"></i>
                     <span>Profile</span></a>
             </li>
 
@@ -51,7 +51,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <ul class="nav">
                 <li class="nav-item {{ request()->is('portofolio*') ? 'active' : '' }}">
-                    <a class="nav-link" href="/portofolio/{{ auth()->user()->id }}">
+                    <a class="nav-link" href="/portofolio">
                         <i class="bi bi-journal-text"></i>
                         <span>Portofolio</span>
                     </a>
@@ -70,7 +70,7 @@
             @if (auth()->user()->portofolio->template == 1)
             <ul class="nav">
                 <li class="nav-item {{ request()->is('pengalaman*') ? 'active' : '' }}">
-                    <a class="nav-link" href="/pengalaman/{{ auth()->user()->id }}">
+                    <a class="nav-link" href="/pengalaman">
                         <i class="bi bi-book"></i>
                         <span>Pengalaman</span>
                     </a>

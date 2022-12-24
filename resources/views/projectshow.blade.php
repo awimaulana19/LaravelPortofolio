@@ -18,7 +18,7 @@
                 <h2 class="mb-4">{{ $posting->judul }}</h2>
                     <img src="{{ asset('storage/' . $posting->gambar) }}" class="card-img-top mb-2" width="1000px" height="500px"
                         alt="...">
-                <p>{!! $posting->isi !!}</p>
+                <p>{{ $posting->isi }}</p>
                 <a class="btn btn-light mt-3 mb-4" href="/index/{{ $data->user->username }}">Kembali Ke Portofolio</a>
             </div>
         </div>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="col-lg-8">
-        <form enctype="multipart/form-data" method="post" action="/dashboard/portofolio/{{ $portofolio->id }}">
+        <form enctype="multipart/form-data" method="post" action="/datadiri/{{ $portofolio->id }}">
             @csrf
             <div class="mb-3">
                 <label for="sd" class="form-label">SD</label>

@@ -1,7 +1,7 @@
 @extends('dashboard.MainLayoutAdmin')
 
 @section('content')
-    <div class="d-block mb-2">
+    <div class="d-block mb-3">
         @if (session()->has('success'))
             <div class="alert alert-success" role="alert">
                 {{ session('success') }}
