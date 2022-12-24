@@ -51,6 +51,35 @@
             <a class="nav-link text-primary me-4" href="#contact">Contact</a>
           </li>
         </ul>
+        <ul class="navbar-nav ms-auto">
+          @auth
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      {{ Auth::user()->name }}
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/dashboard"><i
+                                  class="bi bi-layout-text-window-reverse"></i> Dashboard</a></li>
+                      <li>
+                          <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                          <form action="/logout" method="post">
+                              @csrf
+                              <button class="dropdown-item" type="submit"><i
+                                      class="bi bi-box-arrow-left"></i> Logout</button>
+                          </form>
+                      </li>
+                  </ul>
+              </li>
+          @else
+              <li class="nav-item">
+                  <a class="nav-link text-primary" href="/"><i class="bi bi-box-arrow-in-right"></i>
+                      Login</a>
+              </li>
+          @endauth
+        </ul>
       </div>
     </div>
   </nav>

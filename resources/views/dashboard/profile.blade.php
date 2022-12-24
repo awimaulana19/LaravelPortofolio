@@ -22,10 +22,4 @@
             <td>{{ $profile->email }}</td>
         </tr>
     </table>
-
-    <div>
-        <a href="/dashboard/portofolio/{{ $data->id }}" class="btn btn-primary">Edit Portofolio</a>
-        <a href="/dashboard/datadiri" class="btn btn-primary">Edit Data Diri</a>
-        <a href="/dashboard/pengalaman/{{ $data->id }}" class="btn btn-primary">Edit Pengalaman</a>
-    </div>
 @endsection

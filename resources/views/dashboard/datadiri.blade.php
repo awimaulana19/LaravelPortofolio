@@ -9,8 +9,8 @@
         @endif
     </div>
     <div>
-        <a href="/dashboard/profil/{{ $data->id }}" class="btn btn-primary">Profile</a>
-        <a href="/dashboard/pendidikan/{{ $data->id }}" class="btn btn-primary">Pendidikan Formal</a>
-        <a href="/dashboard/kontak/{{ $data->id }}" class="btn btn-primary">Kontak/Sosmed</a>
+        <a href="/datadiri/profil/{{ $data->id }}" class="btn btn-primary">Profile</a>
+        <a href="/datadiri/pendidikan/{{ $data->id }}" class="btn btn-primary">Pendidikan Formal</a>
+        <a href="/datadiri/kontak/{{ $data->id }}" class="btn btn-primary">Kontak/Sosmed</a>
     </div>
 @endsection

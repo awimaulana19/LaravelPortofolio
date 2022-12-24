@@ -50,8 +50,38 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <ul class="nav">
+                <li class="nav-item {{ request()->is('portofolio*') ? 'active' : '' }}">
+                    <a class="nav-link" href="/portofolio/{{ auth()->user()->id }}">
+                        <i class="bi bi-journal-text"></i>
+                        <span>Portofolio</span>
+                    </a>
+                </li>
+            </ul>
+            <hr class="sidebar-divider d-none d-md-block">
+            <ul class="nav">
+                <li class="nav-item {{ request()->is('datadiri*') ? 'active' : '' }}">
+                    <a class="nav-link" href="/datadiri">
+                        <i class="bi bi-person-lines-fill"></i>
+                        <span>Data Diri</span>
+                    </a>
+                </li>
+            </ul>
+            <hr class="sidebar-divider d-none d-md-block">
+            @if (auth()->user()->portofolio->template == 1)
+            <ul class="nav">
+                <li class="nav-item {{ request()->is('pengalaman*') ? 'active' : '' }}">
+                    <a class="nav-link" href="/pengalaman/{{ auth()->user()->id }}">
+                        <i class="bi bi-book"></i>
+                        <span>Pengalaman</span>
+                    </a>
+                </li>
+            </ul>
+            <hr class="sidebar-divider d-none d-md-block">
+            @endif
+            <ul class="nav">
                 <li class="nav-item {{ request()->is('project*') ? 'active' : '' }}">
                     <a class="nav-link" href="/project">
+                        <i class="bi bi-person-workspace"></i>
                         <span>My Project</span>
                     </a>
                 </li>

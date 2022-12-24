@@ -15,6 +15,18 @@
             <li> <a href="#works">Portofolio</a></li>
             <li> <a href="#about-myself">About</a></li>
             <li> <a href="#contact">Contact</a></li>
+            @auth
+                <li>
+                    <a href="/dashboard">
+                        Hy, {{ Auth::user()->name }}
+                    </a>
+                </li>
+            @else
+                <li>
+                    <a href="/"><i class="bi bi-box-arrow-in-right"></i>
+                        Login</a>
+                </li>
+            @endauth
          </ul>
        <img src="{{ asset('template3/images/Enabled.png') }}" alt="">
       </nav>

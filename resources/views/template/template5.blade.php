@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <title>Portofolio {{ $data->user->name }}</title>
 </head>
 
@@ -45,6 +46,18 @@
                                 <a href="#profile"
                                     class="text-base text-dark py-2 mx-8 flex hover:text-primary">Profile</a>
                             </li>
+                            @auth
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-8 flex hover:text-primary" href="/dashboard">
+                                    Hy, {{ Auth::user()->name }}
+                                </a>
+                            </li>
+                            @else
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-8 flex hover:text-primary" href="/"><i class="bi bi-box-arrow-in-right"></i>
+                                    Login</a>
+                            </li>
+                            @endauth
                         </ul>
                     </nav>
                 </div>
