@@ -1,13 +1,13 @@
 @extends('dashboard.MainLayoutAdmin')
 
 @section('content')
-    {{-- <div class="d-block mb-2">
+    <div class="d-block mb-2">
         @if (session()->has('success'))
             <div class="alert alert-success" role="alert">
                 {{ session('success') }}
             </div>
         @endif
-    </div> --}}
+    </div>
     <div class="row">
         <div class="col-4">
             <h5>Profile</h5>
